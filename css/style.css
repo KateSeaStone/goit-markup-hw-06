@@ -645,21 +645,6 @@ color: #FFFFFF;
 margin-bottom: 20px;
 }
 
-/*=========== Подпишитесь на рассылку ============  */
-.mail-box {
-  display: flex;
-}
-
-
-.mail-title {
-font-family: Roboto;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.143;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--primery-white-color);
-}
 
 
 
@@ -810,13 +795,15 @@ color: var(--primery-white-color);
 
 /* ========== Модальное окно ========== */
 /* ==================================== */
+
 .is-hidden {
-opacity: 0;
+opacity: 0;  
 visibility: hidden;
 pointer-events: none;
 }
 
-.backdrop {
+/* общий div для модальных окон */
+.pop-ups {
 position: fixed;
 left: 0;
 right: 0;
@@ -824,37 +811,50 @@ top: 0;
 bottom: 0;
 z-index: 9;
 background-color: rgba(0,0,0,0.5);
-transition: all 250ms linear;} 
+transition: all 500ms ease;} 
 
-.backdrop.is-hidden {
-opacity: 0;
-visibility: hidden;
-pointer-events: none;
-transition: all 500ms linear 500ms;
+/* поддерживающий div для модального окна, по
+которому центрируем модальное окно */
+.pop-ups_popup {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+overflow: hidden auto;
+padding: 20px 0;
+display: flex;
 }
 
-.modal {
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%) scale(1);
-width: 528px;
-height: 581px;
+.pop-ups_modal {
+max-width: 528px;
+width: 100%;
+min-height: 581px;
+padding: 30px;
+position: relative;
+margin: auto;
 background-color: var(--primery-white-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
-padding: 0 40px;
-padding-top: 75px;
-transition: transform 500ms linear 250ms;
+
+transform: translateY(0) scale(1) rotate(720deg);
+transition: all 750ms ease;
+transition-delay: 1s;
 }
 
-/* при закрытии модального окна, 
-оно перемещается по оси У вверх  от Алексея 09.09.20*/
+.pop-ups.is-hidden {
+opacity: 0;
+visibility: hidden;
+transition-delay: 1s;
+}
 
-.backdrop.is-hidden .modal 
-{transform: translateX(-50%) scale (1);
-transition: transform 500ms linear 0s;}
- 
+.is-hidden .pop-ups_modal {
+transform: translateY(-200%) scale(0.4);
+/* transition: all 1s ease; */
+transition-delay: 0s;
+}
+
+
 .modal-close {
 position: absolute;
 right: 8px;
@@ -865,5 +865,3 @@ height: 30px;
 background: #FFFFFF;
 border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
- 
