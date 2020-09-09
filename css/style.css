@@ -645,6 +645,21 @@ color: #FFFFFF;
 margin-bottom: 20px;
 }
 
+/*=========== Подпишитесь на рассылку ============  */
+.mail-box {
+  display: flex;
+}
+
+
+.mail-title {
+font-family: Roboto;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.143;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--primery-white-color);
+}
 
 
 
