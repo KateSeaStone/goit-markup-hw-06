@@ -7,7 +7,8 @@
 }
 
 .link, .phone, .hero-button, .social-list-item-link,
-.filter-button, .clients-logo-svg  {
+.filter-button, .clients-logo-svg, .modal-close-btn-svg,
+ .modal-form-btn, .modal-form-input {
  /* transition-property: background-color; 
  transition-duration: 2000ms;
  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
@@ -1074,6 +1075,7 @@ outline: none;
   align-items: center;
   margin-bottom: 30px;
 }
+
 .modal-form-label-checkbox::before {
   content: "";
   display: block;
