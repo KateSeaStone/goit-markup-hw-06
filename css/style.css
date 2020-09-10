@@ -810,6 +810,8 @@ color: var(--primery-white-color);
 
 /* ============ Проекты ============*/
 
+
+
 .project-list-item .link {
   text-decoration: none;
  }
@@ -824,16 +826,14 @@ color: var(--primery-white-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-left: 24px;
-}
+  }
 
 .project-list-item .text {
   color: var(--primery-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-  margin-left: 24px;  
-}
+  }
 
 .project-list {
    display: flex;
@@ -846,6 +846,10 @@ color: var(--primery-white-color);
 
 .project-list-item:not(:nth-last-child(-n+3)) {
   margin-bottom: 30px;
+}
+
+.project-list-item-footer {
+  padding: 20px 24px;
 }
 
 .project-list-item-img {
@@ -867,7 +871,6 @@ color: var(--primery-white-color);
   left: 0;
   overflow: hidden;
   opacity: 0;
-
   
   pointer-events: none;
 
@@ -881,7 +884,6 @@ overflow: visible;
 pointer-events: unset;
 transform: translateY(0);
 }
-
 
 .overlay-title {
 font-weight: 400;
@@ -1078,10 +1080,6 @@ margin-right: 4px;
 .modal-form-checkbox:checked + .modal-form-label-checkbox::before {
   background-image: url(../images/mod_window/icon-check.svg);
 }
-
-
- 
-
 
 .modal-form-label-checkbox-link {
   color: var(--accent-color);
