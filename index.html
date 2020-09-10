@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ВебСтудия</title>
-    <base target="_blank">
+    <!-- <base target="_blank"> -->
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
@@ -456,7 +456,7 @@
         <div class="mail-box">
           <p class="mail-title">Подпишитесь на рассылку</p>
           <form action="#" class="mail-form">
-            <input type="email" class="mail-form-input" name="user-mail" placeholder="E-mail">
+            <input type="email" class="mail-form-input" name="user-mail" required placeholder="E-mail">
             <button type="submit" class="mail-button">Подписаться</button>
           </form>
         </div>
@@ -471,10 +471,57 @@
     <div class="pop-ups_modal">
       <button type="button" data-modal-close>
         <svg class="modal-close">
-          <use href="./images/mod_window/sprite-modal-window.svg#icon-close-black-18dp">
+          <use href="../images/mod_window/sprite-modal-window-close.svg#icon-close-black-18dp">
           </use>
         </svg>
       </button>
+
+      <h2 class="modal-form-title">Оставьте свои данные, мы вам перезвоним</h2>
+      <form action="" class="modal-form">
+               
+        <div class="modal-form-field">
+          <label for="">Имя</label>
+          <input type="text" name="user-name" id="user-name" class="modal-form-input">
+          <svg class="modal-form-input-icon-svg">
+            <use href="../images/mod_window/sprite-modal-window.svg#icon-person-black" >
+
+            </use>
+          </svg>
+        
+        </div>
+
+        <div class="modal-form-field">
+          <label for="">Телефон</label>
+          <input type="tel" name="user-phone" id="user-phone" class="modal-form-input">
+          <svg class="modal-form-input-icon-svg">
+            <use href="../images/mod_window/sprite-modal-window.svg#icon-phone-black" >
+
+            </use>
+          </svg>
+        </div>
+
+        <div class="modal-form-field">
+          <label for="">Почта</label>
+          <input type="email" name="user-email" id="user-email" class="modal-form-input">
+          <svg class="modal-form-input-icon-svg">
+            <use href="../images/mod_window/sprite-modal-window.svg#icon-email-black" >
+
+            </use>
+          </svg> 
+        </div>
+
+        <div class="modal-form-field">
+          <label for="user-message">Комментарий</label>
+          <textarea name="" name="user-message" id="user-message" class="modal-form-message"></textarea>
+        </div>
+
+        <input type="checkbox" name="user-policy" id="user-policy" class="modal-form-checkbox">
+        <label for="user-policy" class="modal-form-label-checkbox">
+          Соглашаюсь с рассылкой и принимаю<a href="">Условия договора</a>
+        </label>
+
+        <button type="submit" class="modal-form-btn">Отправить</button>
+      </form>
     </div>
   </div>
 </div>
