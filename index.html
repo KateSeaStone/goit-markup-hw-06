@@ -469,7 +469,7 @@
 <div class="pop-ups is-hidden" data-modal>
   <div class="pop-ups_popup">
     <div class="pop-ups_modal">
-      <button type="button" data-modal-close>
+      <button type="button" class="modal-close-btn" data-modal-close>
         <svg class="modal-close">
           <use href="../images/mod_window/sprite-modal-window-close.svg#icon-close-black-18dp">
           </use>
@@ -512,12 +512,12 @@
 
         <div class="modal-form-field">
           <label for="user-message">Комментарий</label>
-          <textarea name="" name="user-message" id="user-message" class="modal-form-message"></textarea>
+          <textarea name="user-message" id="user-message" class="modal-form-message"></textarea>
         </div>
 
-        <input type="checkbox" name="user-policy" id="user-policy" class="modal-form-checkbox">
+        <input type="checkbox" name="user-policy" id="user-policy" class="modal-form-checkbox visually-hidden">
         <label for="user-policy" class="modal-form-label-checkbox">
-          Соглашаюсь с рассылкой и принимаю<a href="">Условия договора</a>
+          <span> Соглашаюсь с рассылкой и принимаю<a href="">Условия договора</a></span>
         </label>
 
         <button type="submit" class="modal-form-btn">Отправить</button>
