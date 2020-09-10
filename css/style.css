@@ -932,7 +932,7 @@ display: flex;
 max-width: 528px;
 width: 100%;
 min-height: 581px;
-padding: 0 40px;
+padding: 40px;
 position: relative;
 margin: auto;
 background-color: var(--primery-white-color);
@@ -956,18 +956,28 @@ transform: translateY(-200%) scale(0.4);
 transition-delay: 0s;
 }
 
-.modal-close-btn-svg {
+.modal-close-btn {
 position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
 right: 8px;
 top: 8px;
 border-radius: 50%;
-width: 18px;
-height: 18px;
+width: 30px;
+height: 30px;
 background: var(--primery-white-color);
 border: 1px solid rgba(0, 0, 0, 0.1);
 }
- .modal-close-btn-svg:hover,
- .modal-close-btn-svg:focus{
+
+.modal-close-btn-svg {
+ width: 18px;
+ height: 18px;
+ fill: var(--title-text-color);
+
+}
+
+ .modal-close-btn:hover .modal-close-btn-svg {
   fill: var(--accent-color);
  }
 
